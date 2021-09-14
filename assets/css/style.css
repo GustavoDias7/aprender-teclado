@@ -21,12 +21,18 @@ p, li, a {
 section {
   padding: 80px 0;
 }
-section .container h2 {
+.title {
   color: #460876;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
   font-size: 2rem;
+}
+.subtitle {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+  margin-bottom: 50px;
 }
 
 /* === HEADER === */
@@ -34,6 +40,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   background-color: #801CBD;
 }
@@ -140,7 +147,7 @@ header ul li:first-child {
 #hero .sides .left {
   max-width: 610px;
 }
-#hero .sides .left h2 {
+#hero .sides .left h2.title {
   text-align: left;
   text-transform: none;
 }
@@ -172,7 +179,7 @@ header ul li:first-child {
 #about .sides .right {
   max-width: 450px;
 }
-#about .sides .right h2 {
+#about .sides .right h2.title {
   font-size: 1.5rem;
   text-align: left;
   text-transform: none;
@@ -195,12 +202,6 @@ header ul li:first-child {
 }
 
 /* === CONTENT === */
-#content .subtitle {
-  text-align: center;
-  max-width: 750px;
-  margin: auto;
-  margin-bottom: 50px;
-}
 #content .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -208,7 +209,7 @@ header ul li:first-child {
 }
 #content .box {
   max-width: 260px;
-  box-shadow: 0px 0 25px 0 rgb(128, 28, 189, 0.2);
+  box-shadow: 0px 0 20px 0 rgb(128, 28, 189, 0.3);
   transition: .4s;
 }
 #content .box:hover {
@@ -240,4 +241,69 @@ header ul li:first-child {
 }
 #content .box .gn-button {
   width: 100%;
+}
+
+/* === FAQ === */
+.accordion {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+  transition: .2s;
+  outline: none;
+  border: 2px solid #801CBD;
+  background-color: transparent;
+}
+.accordion:last-child {
+  margin-bottom: 0px;
+}
+.accordion .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.accordion .accordion-header h3 {
+  font-size: 18px;
+  transition: 0.2s;
+}
+.accordion:focus .accordion-header h3 {
+  color: #460876;
+}
+.accordion .accordion-header .arrow {
+  width: 22px;
+  height: 22px;
+  margin-left: 20px;
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: .2s;
+}
+.accordion[show] .accordion-header .arrow {
+  transform: rotate(-180deg);
+}
+.accordion .accordion-content {
+  height: 0;
+  overflow: hidden;
+}
+.accordion[show] .accordion-content {
+  height: auto;
+}
+.accordion .accordion-content > div {
+  padding: 0 20px 20px;
+}
+.accordion[show] .accordion-content > div {
+  animation: accordion-anima .4s forwards;
+}
+@keyframes accordion-anima {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0px);
+  }
 }
