@@ -5,24 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/menu-dropdown.css">
+  <link rel="stylesheet" href="./assets/css/glider.css">
   <title>Music Site</title>
 </head>
 <body>
   <header>
     <div class="container">
-      <a href="#" class="logo">
+      <a href="/" class="logo">
         <h1>LOGO</h1>
       </a>
       <nav>
         <ul>
           <li><a class="link" href="#">Home</a></li>
-          <li><a class="link" href="#about">Sobre</a></li>
-          <li><a class="link" href="#content">Conteúdos</a></li>
-          <li><a class="link" href="#budget">Orçamento</a></li>
-          <li><a class="link" href="#faq">FAQ</a></li>
-          <li><a class="link" href="#contacts">Contatos</a></li>
-          <li><a class="gn-button" href="#contact-us">Fale conosco</a></li>
+          <li><a class="link" href="#sobre">Sobre</a></li>
+          <li><a class="link" href="#conteudo">Conteúdos</a></li>
+          <li><a class="link" href="#orcamento">Orçamento</a></li>
+          <li><a class="link" href="#perguntas-frequentes">FAQ</a></li>
+          <li><a class="link" href="#contatos">Contatos</a></li>
+          <li><a class="gn-button" href="#fale-conosco">Fale conosco</a></li>
         </ul>
       </nav>
     </div>
@@ -49,6 +49,7 @@
     </div>
   </section>
   <section id="about">
+    <span id="sobre"></span>
     <div class="container">
       <div class="sides">
         <div class="left">
@@ -87,6 +88,7 @@
     </div>
   </section>
   <section id="content">
+    <span id="conteudo"></span>
     <div class="container">
       <h2 class="title">Conteúdo</h2>
       <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nobis!</p>
@@ -127,11 +129,106 @@
     </div>
   </section>
   <section id="budget">
+    <span id="orcamento"></span>
     <div class="container">
+      <h2 class="title">Orçamento</h2>
 
+      <div class="glider-contain">
+        <div class="cards">
+          <div class="card">
+            <div class="content">
+              <span class="recommend-text">Recomendado</span>
+              <h3>Semanal</h3>
+              <ul>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li class="li-disabled">
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+              </ul>
+              <div class="price">
+                <p class="price-value">R$ 25</p>
+              </div>
+              <a href="#" class="gn-button">Inscreva-se</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="content recommend">
+              <span class="recommend-text">Recomendado</span>
+              <h3>Mensal</h3>
+              <ul>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+              </ul>
+              <div class="price">
+                <p class="price-value">R$ 80</p>
+                <small class="price-eco">Economise 20%</small>
+              </div>
+              <a href="#" class="gn-button">Inscreva-se</a>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="content">
+              <span class="recommend-text">Recomendado</span>
+              <h3>Trimestral</h3>
+              <ul>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </li>
+              </ul>
+              <div class="price">
+                <p class="price-value">R$ 240</p>
+              </div>
+              <a href="#" class="gn-button">Inscreva-se</a>
+            </div>
+          </div>
+        </div>
+
+        <button aria-label="Previous" class="glider-prev"><img src="./assets/images/arrow.svg" alt="Antes"></button>
+        <button aria-label="Next" class="glider-next"><img src="./assets/images/arrow.svg" alt="Próximo"></button>
+        <div role="tablist" class="dots"></div>
+      </div>
     </div>
   </section>
   <section id="faq">
+    <span id="perguntas-frequentes"></span>
     <div class="container">
       <h2 class="title">PErguntas Frequêntes</h2>
       <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nobis!</p>
@@ -195,16 +292,42 @@
     </div>
   </section>
   <section id="contacts">
+    <span id="contatos"></span>
     <div class="container">
 
     </div>
   </section>
   <section id="contact-us">
+    <span id="fale-conosco"></span>
     <div class="container">
 
     </div>
   </section>
-  <script src="./assets/js/menu-dropdown.js"></script>
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/glider.js"></script>
+  <script>
+    new Glider(document.querySelector('.cards'), {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      draggable: true,
+      scrollLock: true,
+      dots: '.dots',
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next',
+      },
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            draggable: false,
+            dots: undefined,
+          }
+        }
+      ]
+    });
+  </script>
 </body>
 </html>
