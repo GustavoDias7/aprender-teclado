@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', 'sans-serif';
 }
+html {
+  scroll-behavior: smooth;
+}
 .container {
   max-width: 1180px;
   margin: auto;
@@ -17,9 +20,18 @@ a {
 }
 p, li, a {
   font-size: 1rem;
+  color: #222222;
 }
 section {
+  position: relative;
   padding: 80px 0;
+}
+section > span {
+  position: absolute;
+  top: -60px;
+  width: 0;
+  height: 0;
+  display: block;
 }
 .title {
   color: #460876;
@@ -109,21 +121,34 @@ header ul li:first-child {
   border-radius: 4px;
   border: none;
   outline: none;
-  background-color: #460876;
+  background-color: #801CBD;
   transition: 0.4s;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
 }
-.gn-button:focus {
+header .gn-button {
+  background-color: #460876;
+}
+header .gn-button:focus {
   box-shadow: 0 0 6px #D09EF8;
 }
-.gn-button:active {
+header .gn-button:active {
   background-color: #D09EF8;
 }
-.gn-button:hover {
+header .gn-button:hover {
   background-color: #D09EF8;
   box-shadow: 0 0 10px #D09EF8;
+}
+.gn-button:focus {
+  background-color: #9f48d4;
+}
+.gn-button:active {
+  background-color: #9f48d4;
+}
+.gn-button:hover {
+  background-color: #9f48d4;
+  box-shadow: 0 0 10px #9f48d4;
 }
 
 /* === sides === */
@@ -243,6 +268,82 @@ header ul li:first-child {
   width: 100%;
 }
 
+/* === BUDGET === */
+#budget {
+  background-color: #F0E3FF;
+}
+.card .content {
+  position: relative;
+  margin: auto;
+  padding: 35px 0%;
+  text-align: center;
+  border-radius: 5px;
+  background: linear-gradient(#F0E3FF, #e2c9ff);
+  border: 1px solid #460876;
+  max-width: 300px;
+}
+.card .recommend-text {
+  display: none;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  line-height: 28px;
+  width: 135px;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #460876;
+}
+.card .recommend {
+  border: 2px solid #460876;
+}
+.card .recommend .recommend-text {
+  display: block;
+}
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 35px;
+}
+.card ul li {
+  margin-bottom: 15px;
+}
+.card ul li:last-child {
+  margin-bottom: 0;
+}
+.card .li-disabled p {
+  opacity: 0.5;
+}
+.card .li-disabled ~ li p {
+  opacity: 0.5;
+}
+.card .price {
+  position: relative;
+  margin-top: 25px;
+}
+.card .price-parc {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.card .price-value {
+  font-size: 2.5rem;
+}
+.card .price-eco {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.card .gn-button {
+  margin: auto;
+  margin-top: 30px;
+}
+
 /* === FAQ === */
 .accordion {
   display: block;
@@ -267,6 +368,7 @@ header ul li:first-child {
 .accordion .accordion-header h3 {
   font-size: 18px;
   transition: 0.2s;
+  color: #801CBD;
 }
 .accordion:focus .accordion-header h3 {
   color: #460876;
