@@ -234,7 +234,7 @@ header .gn-button:hover {
 }
 #content .box {
   max-width: 260px;
-  box-shadow: 0px 0 20px 0 rgb(128, 28, 189, 0.3);
+  box-shadow: 0px 0 20px 0 rgb(128, 28, 189, 0.2);
   transition: .4s;
 }
 #content .box:hover {
@@ -408,4 +408,29 @@ header .gn-button:hover {
       opacity: 1;
       transform: translateY(0px);
   }
+}
+
+/* === CONTACT === */
+#contacts {
+  background-color: #F0E3FF;
+}
+.subtitle em {
+  font-weight: 600;
+}
+.link-group {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: auto;
+}
+.link-group a.gn-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  line-height: 60px;
+}
+.link-group a img {
+  margin-right: 5px;
 }
