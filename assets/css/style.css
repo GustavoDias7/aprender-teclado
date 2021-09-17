@@ -346,6 +346,10 @@ header .gn-button:hover {
 }
 
 /* === FAQ === */
+.accordion-container {
+  max-width: 800px;
+  margin: auto;
+}
 .accordion {
   display: block;
   width: 100%;
