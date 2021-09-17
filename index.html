@@ -317,9 +317,51 @@
   <section id="contact-us">
     <span id="fale-conosco"></span>
     <div class="container">
-
+      <h2 class="title">Fale Conosco</h2>
+      <p class="subtitle">
+        Envie sua mensagem diretamente para o nosso email de contato.
+      </p>
+      <div class="contact-form">
+        <form action="">
+          <div class="sides">
+            <ul class="left">
+              <li>
+                <input id="name" type="text" placeholder="Digite seu nome">
+              </li>
+              <li>
+                <input id="tel" type="tel" placeholder="Digite seu telefone">
+              </li>
+              <li>
+                <input id="email" type="email" placeholder="Digite seu email" class="invalid">
+                <p class="invalid-message">Invalid field</p>
+              </li>
+            </ul>
+            <ul class="right">
+              <li>
+                <select name="subject" id="subject">
+                  <option checked>Selecione</option>
+                  <option value="subject-1">Subject 1</option>
+                  <option value="subject-2">Subject 2</option>
+                  <option value="subject-3">Subject 3</option>
+                </select>
+              </li>
+              <li>
+                <textarea placeholder="Digite sua mensagem"></textarea>
+              </li>
+              <li>
+                <button class="gn-button">Submit</button>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
+  <footer>
+    <div class="container">
+      <p>Desenvolvido por <a href="#">Gustavo Dias</a></p>
+    </div>
+  </footer>
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/glider.js"></script>
   <script>

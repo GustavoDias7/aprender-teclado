@@ -22,6 +22,7 @@ p, li, a {
   font-size: 1rem;
   color: #222222;
 }
+main,
 section {
   position: relative;
   padding: 80px 0;
@@ -291,7 +292,7 @@ header .gn-button:hover {
   margin: auto;
   line-height: 28px;
   width: 135px;
-  color: #FFFFFF;
+  color: #FEFEFE;
   text-align: center;
   border-radius: 3px;
   background-color: #460876;
@@ -433,4 +434,119 @@ header .gn-button:hover {
 }
 .link-group a img {
   margin-right: 5px;
+}
+
+/* CONTACT-US */
+.contact-form form {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+.contact-form .sides {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-form .sides ul {
+  width: 49%;
+}
+.contact-form .sides ul li {
+  position: relative;
+}
+.contact-form label,
+.contact-form input {
+    display: block;
+}
+.contact-form label {
+    color: #222222;
+    line-height: 18px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    cursor: pointer;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    max-width: 564px;
+    height: 55px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #D09EF8;
+    color: #222222;
+    font-size: 1rem;
+    padding: 0 8px;
+    background-position: calc(100% - 16px) center;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition: border .3s;
+    outline: none;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #801CBD;
+}
+.contact-form input[type="checkbox"],
+.contact-form input[type="radio"] {
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+/* invalid input */
+.contact-form input.invalid {
+  border: 1px solid #EB5757 !important;
+}
+.contact-form input ~ p.invalid-message {
+  display: none;
+  position: absolute;
+  left: 8px;
+  bottom: 1px;
+  line-height: 18px;
+  color: #EB5757;
+  font-size: 0.75rem;
+}
+.contact-form input.invalid ~ p.invalid-message {
+  display: block;
+}
+/* select */
+.contact-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: -2px;
+  text-overflow: '';
+  cursor: pointer;
+  background-image: url(../images/arrow.svg);
+}
+.contact-form select.invalid {
+  border: 2px solid #EB5757;
+}
+.contact-form option:first-child {
+  display: none;
+}
+/* textarea */
+.contact-form textarea {
+  padding: 8px;
+  height: 126px;
+  resize: none;
+}
+/* submit button */
+#contact-us .gn-button {
+  width: 100%;
+}
+
+/* === FOOTER === */
+footer {
+  padding: 60px;
+  background-color: #801CBD;
+}
+footer p {
+  color: #FEFEFE;
+  text-align: center;
+}
+footer p a {
+  font-weight: 600;
+  color: #460876;
 }
