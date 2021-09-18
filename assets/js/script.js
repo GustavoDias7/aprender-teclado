@@ -1,6 +1,4 @@
-function initLinkUnderline({
-  linkSelector
-}) {
+function initLinkUnderline({ linkSelector }) {
   const $links = document.querySelectorAll(linkSelector);
   let lastClicked = 0;
   const active = 'active';
@@ -12,16 +10,30 @@ function initLinkUnderline({
       if (index === lastClicked) return;
       $links[lastClicked].classList.remove(active);
       lastClicked = index;
-    })
-  })
+    });
+  });
 }
 function initSidebar({
-  hamburgerSelector,
-  sidebarContainer
+  activeSidebar,
+  closeSidebar,
+  sidebarContainer,
 }) {
+  const $activeSidebar = document.querySelector(activeSidebar);
+  $activeSidebar.addEventListener('click', handleActive);
 
+  const $closeSidebar = document.querySelector(closeSidebar);
+  $closeSidebar.addEventListener('click', handleActive);
+
+  const $sidebarContainer = document.querySelector(sidebarContainer);
+  $sidebarContainer.addEventListener('click', handleActive);
+
+  function handleActive({ target }) {
+    if (target !== this) return;
+    $sidebarContainer.classList.toggle('active');
+    $activeSidebar.classList.toggle('active')
+  }
 }
-function accordion({ selectorName, onlyOneOpen = false }) {
+function initAccordion({ selectorName, onlyOneOpen = false }) {
   const $accordions = document.querySelectorAll(selectorName);
   let lastOpen = 0;
   let setLastOpen = (newValue) => {
@@ -37,18 +49,19 @@ function accordion({ selectorName, onlyOneOpen = false }) {
         $accordions[lastOpen].removeAttribute('show');
         setLastOpen(index);
       }
-    })
-  })
+    });
+  });
 }
 
-initLinkUnderline({ 
-  linkSelector: '.link' 
+initLinkUnderline({
+  linkSelector: 'header .gn-link',
 });
 initSidebar({
-  hamburgerSelector: '',
-  sidebarContainer: '',
-})
-accordion({
+  activeSidebar: '#burger',
+  closeSidebar: '#close-sidebar',
+  sidebarContainer: '#sidebar-container',
+});
+initAccordion({
   selectorName: '[data-only]',
   onlyOneOpen: true,
 });
