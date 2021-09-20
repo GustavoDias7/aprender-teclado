@@ -129,7 +129,8 @@
 }
 
 /* added */
-.glider {
+.glider-border {
+  height: 455px;
   overflow: hidden;
 }
 .glider-next {
