@@ -53,6 +53,17 @@ body > section > span {
   margin: auto;
   margin-bottom: 50px;
 }
+/* accessibility */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height:  1px;
+  width:   1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
 
 /* === HEADER === */
 header {
@@ -548,7 +559,7 @@ header .gn-button:hover {
   left: 8px;
   bottom: 1px;
   line-height: 18px;
-  color: #eb5757;
+  color: #ec2c2c;
   font-size: 0.75rem;
 }
 .contact-form input.invalid ~ p.invalid-message {
