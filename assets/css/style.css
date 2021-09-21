@@ -254,6 +254,9 @@ header .gn-button:hover {
   transition: 0.4s;
   padding: 25px;
 }
+#content .box img {
+  transition: 0.4s;
+}
 /* animation only desktop */
 @media (min-width: 1120px) {
   #content .box:hover {
@@ -263,25 +266,15 @@ header .gn-button:hover {
     color: #d09ef8;
   }
 }
-#content .box img {
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-  border-radius: 60px;
-  background-color: #801cbd;
-}
 #content .box h3 {
   font-size: 1.5rem;
   margin-bottom: 12px;
   color: #801cbd;
   transition: 0.4s;
 }
-#content .box p {
-  margin-bottom: 30px;
-}
-#content .box .gn-button {
-  width: 100%;
+#content .gn-button {
+  margin: auto;
+  margin-top: 50px;
 }
 
 /* === BUDGET === */
