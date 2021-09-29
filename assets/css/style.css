@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', 'sans-serif';
+  font-family: "Roboto", "sans-serif";
 }
 html {
   scroll-behavior: smooth;
   background-color: #fefefe;
+}
+body {
+  padding-top: 80px;
 }
 .container {
   max-width: 1100px;
@@ -57,8 +60,8 @@ body > section > span {
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
-  height:  1px;
-  width:   1px;
+  height: 1px;
+  width: 1px;
   margin: -1px;
   padding: 0;
   overflow: hidden;
@@ -66,7 +69,7 @@ body > section > span {
 }
 
 /* === HEADER === */
-header {
+#main-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -74,27 +77,27 @@ header {
   width: 100%;
   background-color: #801cbd;
 }
-header .container {
+#main-header .container {
   padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header .logo {
+#main-header .logo {
   transition: 0.4s;
   color: #fefefe;
 }
-header .logo:hover {
+#main-header .logo:hover {
   color: #460876;
 }
-header ul {
+#main-header ul {
   display: flex;
 }
-header ul li {
+#main-header ul li {
   margin-left: 20px;
   line-height: 100%;
 }
-header ul li:first-child {
+#main-header ul li:first-child {
   margin-left: 0px;
 }
 .gn-link {
@@ -107,15 +110,15 @@ header ul li:first-child {
 .gn-link:hover {
   color: #d09ef8;
 }
-header .gn-link {
+#main-header .gn-link {
   position: relative;
   line-height: 40px;
 }
-header .gn-link.active::after {
+#main-header .gn-link.active::after {
   width: 100%;
 }
-header .gn-link::after {
-  content: '';
+#main-header .gn-link::after {
+  content: "";
   transition: width 0.4s;
   display: block;
   position: absolute;
@@ -124,7 +127,7 @@ header .gn-link::after {
   height: 2px;
   background-color: #d09ef8;
 }
-header .gn-link:hover::after {
+#main-header .gn-link:hover::after {
   width: 100%;
 }
 /* === generic-button === */
@@ -153,16 +156,16 @@ header .gn-link:hover::after {
   background-color: #9f48d4;
   box-shadow: 0 0 10px #9f48d4;
 }
-header .gn-button {
+#main-header .gn-button {
   background-color: #460876;
 }
-header .gn-button:focus {
+#main-header .gn-button:focus {
   box-shadow: 0 0 6px #d09ef8;
 }
-header .gn-button:active {
+#main-header .gn-button:active {
   background-color: #d09ef8;
 }
-header .gn-button:hover {
+#main-header .gn-button:hover {
   background-color: #d09ef8;
   box-shadow: 0 0 10px #d09ef8;
 }
@@ -179,9 +182,6 @@ header .gn-button:hover {
 }
 
 /* === HERO === */
-#hero {
-  margin-top: 80px;
-}
 #hero .sides {
   align-items: center;
 }
@@ -229,17 +229,15 @@ header .gn-button:hover {
   display: flex;
   align-items: center;
   max-width: 400px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 #about .sides .right ul li:last-child {
   margin-bottom: 0;
 }
 #about .sides .right img {
-  min-width: 55px;
-  height: 55px;
-  margin-right: 10px;
-  border-radius: 55px;
-  background-color: #801cbd;
+  min-width: 50px;
+  height: 50px;
+  margin-right: 20px;
 }
 
 /* === CONTENT === */
@@ -250,9 +248,10 @@ header .gn-button:hover {
 }
 #content .box {
   max-width: 260px;
-  box-shadow: 0px 0 20px 0 rgb(128, 28, 189, 0.2);
+  box-shadow: 0px 0 20px 0 #801cbd33;
   transition: 0.4s;
   padding: 25px;
+  background-color: #ffffff;
 }
 #content .box img {
   transition: 0.4s;
@@ -341,7 +340,7 @@ header .gn-button:hover {
 }
 .card .li-disabled p::before,
 .card .li-disabled ~ li p::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   top: 50%;
@@ -412,18 +411,18 @@ header .gn-button:hover {
 .accordion:focus .accordion-header h3 {
   color: #460876;
 }
-.accordion .accordion-header .arrow {
+.accordion .accordion-header .arrow-down {
   width: 22px;
   min-width: 22px;
   height: 22px;
   margin-left: 20px;
-  background-image: url(../images/arrow.svg);
+  background-image: url(../images/arrow-down.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   transition: 0.2s;
 }
-.accordion[show] .accordion-header .arrow {
+.accordion[show] .accordion-header .arrow-down {
   transform: rotate(-180deg);
 }
 .accordion .accordion-content {
@@ -534,8 +533,8 @@ header .gn-button:hover {
 .contact-form textarea:focus {
   border-color: #801cbd;
 }
-.contact-form input[type='checkbox'],
-.contact-form input[type='radio'] {
+.contact-form input[type="checkbox"],
+.contact-form input[type="radio"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
 }
@@ -598,6 +597,41 @@ footer address a {
   color: #460876;
 }
 
+/* === CONTENT-ARTICLE === */
+#content-article .container {
+  max-width: 800px;
+}
+#content-article header {
+  padding-bottom: 30px;
+}
+#content-article article {
+  padding-bottom: 40px;
+}
+#content-article article h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222222;
+}
+#content-article article h3 strong {
+  color: #450876;
+}
+#content-article article p.text-content {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+#content-article ul.list {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+#content-article ul.list li {
+  line-height: 30px;
+}
+#content-article ul.list li p::before {
+  content: "\2713";
+  color: #801cbd;
+  font-weight: bolder;
+  margin-right: 10px;
+}
 /* === SIDEBAR === */
 #burger {
   display: none;
@@ -614,7 +648,7 @@ footer address a {
 }
 #burger::after,
 #burger::before {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   height: 4px;
@@ -673,7 +707,7 @@ footer address a {
 }
 .sidebar .close-sidebar::before,
 .sidebar .close-sidebar::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -725,8 +759,11 @@ footer address a {
   #burger {
     display: block;
   }
-  header nav {
+  #main-header nav {
     display: none;
+  }
+  body {
+    padding-top: 60px;
   }
   body > main,
   body > section {
@@ -745,19 +782,13 @@ footer address a {
   .subtitle {
     margin-bottom: 20px;
   }
-  .gn-button {
-    margin: auto;
-  }
 
   /* === HEADER === */
-  header .container {
+  #main-header .container {
     padding: 12px 0;
   }
 
   /* === HERO === */
-  #hero {
-    margin-top: 58px;
-  }
   #hero .sides .left,
   #hero .sides .right {
     max-width: 100%;
@@ -772,6 +803,9 @@ footer address a {
   }
   #hero .sides .left p {
     font-size: 1rem;
+  }
+  #hero .sides .left .gn-button {
+    margin: auto;
   }
 
   /* === ABOUT === */
