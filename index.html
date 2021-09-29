@@ -2,9 +2,15 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="canonical" href="http://127.0.0.1:5500/index.html"/>
-    <meta name="description" content="Oferecemos aulas particulares de teclado para quem está no começo e está com dificuldades no aprendizado">
-    <meta name="keywords" content="curso de teclado, aulas de teclado, como tocar teclado">
+    <link rel="canonical" href="http://127.0.0.1:5500/index.html" />
+    <meta
+      name="description"
+      content="Oferecemos aulas particulares de teclado para quem está no começo e está com dificuldades no aprendizado"
+    />
+    <meta
+      name="keywords"
+      content="curso de teclado, aulas de teclado, como tocar teclado"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -12,7 +18,7 @@
     <title>Music Site</title>
   </head>
   <body>
-    <header>
+    <header id="main-header">
       <div class="container">
         <a href="/" class="logo">
           <h1>LOGO</h1>
@@ -46,7 +52,7 @@
               vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Omnis, vitae?
             </p>
-            <a href="#" class="gn-button">Call to action</a>
+            <a href="#orcamento" class="gn-button">Call to action</a>
           </div>
           <div class="right">
             <img src="./assets/images/keyboard.jpg" alt="Imagem de Teclado" />
@@ -66,23 +72,23 @@
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis,
               vitae!
             </h2>
-            <ul>
+            <ul class="list">
               <li>
-                <img src="./assets/images/" alt="Icon" />
+                <img src="./assets/images/keyboard.svg" alt="Icon" />
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Omnis, vitae?
                 </p>
               </li>
               <li>
-                <img src="./assets/images/" alt="Icon" />
+                <img src="./assets/images/semecolcheia.svg" alt="Icon" />
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Omnis, vitae?
                 </p>
               </li>
               <li>
-                <img src="./assets/images/" alt="Icon" />
+                <img src="./assets/images/headphone.svg" alt="Icon" />
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Omnis, vitae?
@@ -114,7 +120,7 @@
           </article>
           <article class="box">
             <div class="box-header">
-              <img src="./assets//images/semecolcheia.svg" alt="Icon" />
+              <img src="./assets/images/semecolcheia.svg" alt="Icon" />
               <h3>Music</h3>
             </div>
             <p>
@@ -143,7 +149,7 @@
             </p>
           </article>
         </div>
-        <a href="#" class="gn-button">Saiba mais</a>
+        <a href="/conteudo/" class="gn-button">Saiba mais</a>
       </div>
     </section>
     <section id="budget">
@@ -158,7 +164,7 @@
                 <div class="content">
                   <span class="recommend-text">Recomendado</span>
                   <h3>Semanal</h3>
-                  <ul>
+                  <ul class="list">
                     <li>
                       <p>Lorem ipsum dolor sit amet.</p>
                     </li>
@@ -178,15 +184,15 @@
                   <div class="price">
                     <p class="price-value">R$ 25</p>
                   </div>
-                  <a href="#" class="gn-button">Inscreva-se</a>
+                  <a href="#contatos" class="gn-button">Inscreva-se</a>
                 </div>
               </article>
-  
+
               <article class="card">
                 <div class="content recommend">
                   <span class="recommend-text">Recomendado</span>
                   <h3>Mensal</h3>
-                  <ul>
+                  <ul class="list">
                     <li>
                       <p>Lorem ipsum dolor sit amet.</p>
                     </li>
@@ -207,15 +213,15 @@
                     <p class="price-value">R$ 80</p>
                     <small class="price-eco">Economise 20%</small>
                   </div>
-                  <a href="#" class="gn-button">Inscreva-se</a>
+                  <a href="#contatos" class="gn-button">Inscreva-se</a>
                 </div>
               </article>
-  
+
               <article class="card">
                 <div class="content">
                   <span class="recommend-text">Recomendado</span>
                   <h3>Trimestral</h3>
-                  <ul>
+                  <ul class="list">
                     <li>
                       <p>Lorem ipsum dolor sit amet.</p>
                     </li>
@@ -235,18 +241,14 @@
                   <div class="price">
                     <p class="price-value">R$ 240</p>
                   </div>
-                  <a href="#" class="gn-button">Inscreva-se</a>
+                  <a href="#contatos" class="gn-button">Inscreva-se</a>
                 </div>
               </article>
             </div>
           </div>
 
-          <button aria-label="Previous" class="glider-prev">
-            <img src="./assets/images/arrow.svg" alt="Antes" />
-          </button>
-          <button aria-label="Next" class="glider-next">
-            <img src="./assets/images/arrow.svg" alt="Próximo" />
-          </button>
+          <button aria-label="Previous" class="glider-prev"></button>
+          <button aria-label="Next" class="glider-next"></button>
           <div role="tablist" class="dots"></div>
         </div>
       </div>
@@ -263,7 +265,7 @@
           <button class="accordion" data-only>
             <div class="accordion-header">
               <h3>FAQ 1</h3>
-              <span class="arrow"></span>
+              <span class="arrow-down"></span>
             </div>
             <div class="accordion-content">
               <div>
@@ -282,7 +284,7 @@
           <button class="accordion" data-only>
             <div class="accordion-header">
               <h3>FAQ 2</h3>
-              <span class="arrow"></span>
+              <span class="arrow-down"></span>
             </div>
             <div class="accordion-content">
               <div>
@@ -301,7 +303,7 @@
           <button class="accordion" data-only>
             <div class="accordion-header">
               <h3>FAQ 3</h3>
-              <span class="arrow"></span>
+              <span class="arrow-down"></span>
             </div>
             <div class="accordion-content">
               <div>
@@ -356,11 +358,7 @@
             <div class="sides">
               <ul class="left">
                 <li>
-                  <input 
-                    id="name" 
-                    type="text" 
-                    placeholder="Digite seu nome" 
-                  />
+                  <input id="name" type="text" placeholder="Digite seu nome" />
                 </li>
                 <li>
                   <input
@@ -423,16 +421,16 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/glider.js"></script>
     <script>
-      new Glider(document.querySelector('.cards'), {
+      new Glider(document.querySelector(".cards"), {
         slidesToShow: 1,
         slidesToScroll: 1,
         draggable: true,
         scrollLock: true,
         scrollLockDelay: 0,
-        dots: '.dots',
+        dots: ".dots",
         arrows: {
-          prev: '.glider-prev',
-          next: '.glider-next',
+          prev: ".glider-prev",
+          next: ".glider-next",
         },
         responsive: [
           {
