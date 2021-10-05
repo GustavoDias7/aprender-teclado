@@ -598,7 +598,9 @@ footer address {
 }
 footer address a {
   font-weight: 600;
-  color: #460876;
+  text-decoration: underline;
+  color: #fefefe;
+  letter-spacing: 0.8px;
 }
 
 /* === CONTENT-ARTICLE === */
