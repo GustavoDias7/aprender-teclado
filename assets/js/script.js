@@ -1,11 +1,11 @@
 function initLinkUnderline({ linkSelector }) {
   const $links = document.querySelectorAll(linkSelector);
   let lastClicked = 0;
-  const active = 'active';
+  const active = "active";
   $links[lastClicked].classList.add(active);
 
   $links.forEach((link, index) => {
-    link.addEventListener('click', (event) => {
+    link.addEventListener("click", (event) => {
       event.target.classList.add(active);
       if (index === lastClicked) return;
       $links[lastClicked].classList.remove(active);
@@ -17,20 +17,26 @@ function initSidebar({
   activeSidebar,
   closeSidebar,
   sidebarContainer,
+  navLinks,
 }) {
   const $activeSidebar = document.querySelector(activeSidebar);
-  $activeSidebar.addEventListener('click', handleActive);
+  $activeSidebar.addEventListener("click", handleActive);
 
   const $closeSidebar = document.querySelector(closeSidebar);
-  $closeSidebar.addEventListener('click', handleActive);
+  $closeSidebar.addEventListener("click", handleActive);
+
+  const $navLinks = document.querySelectorAll(navLinks);
+  $navLinks.forEach((link) => {
+    link.addEventListener("click", handleActive);
+  });
 
   const $sidebarContainer = document.querySelector(sidebarContainer);
-  $sidebarContainer.addEventListener('click', handleActive);
+  $sidebarContainer.addEventListener("click", handleActive);
 
   function handleActive({ target }) {
     if (target !== this) return;
-    $sidebarContainer.classList.toggle('active');
-    $activeSidebar.classList.toggle('active')
+    $sidebarContainer.classList.toggle("active");
+    $activeSidebar.classList.toggle("active");
   }
 }
 function initAccordion({ selectorName, onlyOneOpen = false }) {
@@ -41,12 +47,12 @@ function initAccordion({ selectorName, onlyOneOpen = false }) {
   };
 
   $accordions.forEach((accordion, index) => {
-    accordion.addEventListener('click', (event) => {
-      event.currentTarget.toggleAttribute('show');
+    accordion.addEventListener("click", (event) => {
+      event.currentTarget.toggleAttribute("show");
       if (onlyOneOpen === false) return;
       let isDifferent = $accordions[lastOpen] != accordion;
       if (isDifferent) {
-        $accordions[lastOpen].removeAttribute('show');
+        $accordions[lastOpen].removeAttribute("show");
         setLastOpen(index);
       }
     });
@@ -54,14 +60,15 @@ function initAccordion({ selectorName, onlyOneOpen = false }) {
 }
 
 initLinkUnderline({
-  linkSelector: 'header .gn-link',
+  linkSelector: "header .gn-link",
 });
 initSidebar({
-  activeSidebar: '#burger',
-  closeSidebar: '#close-sidebar',
-  sidebarContainer: '#sidebar-container',
+  activeSidebar: "#burger",
+  closeSidebar: "#close-sidebar",
+  sidebarContainer: "#sidebar-container",
+  navLinks: ".sidebar .gn-link",
 });
 initAccordion({
-  selectorName: '[data-only]',
+  selectorName: "[data-only]",
   onlyOneOpen: true,
 });

@@ -75,7 +75,7 @@ body > section > span {
   left: 0;
   z-index: 10;
   width: 100%;
-  background-color: #801cbd;
+  background-color: #460876;
 }
 #main-header .container {
   padding: 20px 0;
@@ -85,10 +85,10 @@ body > section > span {
 }
 #main-header .logo {
   transition: 0.4s;
-  color: #fefefe;
 }
+#main-header .logo:focus,
 #main-header .logo:hover {
-  color: #460876;
+  opacity: 0.7;
 }
 #main-header ul {
   display: flex;
@@ -103,7 +103,7 @@ body > section > span {
 .gn-link {
   display: inline-block;
   color: #fefefe;
-  transition: 0.2s;
+  transition: 0.4s;
   outline: none;
 }
 .gn-link:focus,
@@ -119,16 +119,17 @@ body > section > span {
 }
 #main-header .gn-link::after {
   content: "";
-  transition: width 0.4s;
+  transition: 0.4s;
   display: block;
   position: absolute;
   bottom: 6px;
   width: 0;
   height: 2px;
-  background-color: #d09ef8;
+  background-color: #fefefe;
 }
 #main-header .gn-link:hover::after {
   width: 100%;
+  background-color: #d09ef8;
 }
 /* === generic-button === */
 .gn-button {
@@ -146,28 +147,10 @@ body > section > span {
   text-decoration: none;
   text-align: center;
 }
-.gn-button:focus {
-  background-color: #9f48d4;
-}
-.gn-button:active {
-  background-color: #9f48d4;
-}
+.gn-button:focus,
 .gn-button:hover {
   background-color: #9f48d4;
   box-shadow: 0 0 10px #9f48d4;
-}
-#main-header .gn-button {
-  background-color: #460876;
-}
-#main-header .gn-button:focus {
-  box-shadow: 0 0 6px #d09ef8;
-}
-#main-header .gn-button:active {
-  background-color: #d09ef8;
-}
-#main-header .gn-button:hover {
-  background-color: #d09ef8;
-  box-shadow: 0 0 10px #d09ef8;
 }
 
 /* === sides === */
@@ -207,7 +190,7 @@ body > section > span {
   width: 100%;
   height: auto;
   border-radius: 30px 30px 0 30px;
-  box-shadow: 10px 10px 0px #d09ef8;
+  box-shadow: 10px 10px 20px rgba(208, 158, 248, 0.6);
 }
 
 /* === ABOUT === */
@@ -237,7 +220,7 @@ body > section > span {
   margin-bottom: 0;
 }
 #about .sides .right img {
-  min-width: 50px;
+  width: 40px;
   height: auto;
   margin-right: 20px;
 }
@@ -249,6 +232,7 @@ body > section > span {
   justify-content: space-between;
 }
 #content .box {
+  width: 100%;
   max-width: 260px;
   box-shadow: 0px 0 20px 0 #801cbd33;
   transition: 0.4s;
@@ -282,10 +266,14 @@ body > section > span {
 #budget {
   background-color: #f0e3ff;
 }
+.cards {
+  max-width: 700px;
+}
 .card {
   padding: 15px 5px;
 }
 .card .content {
+  height: 400px;
   position: relative;
   margin: auto;
   padding: 35px 20px;
@@ -375,6 +363,7 @@ body > section > span {
   margin: auto;
 }
 .card .gn-button {
+  width: 150px;
   margin: auto;
   margin-top: 30px;
 }
@@ -632,7 +621,7 @@ footer address a {
 #content-article ul.list li {
   line-height: 30px;
 }
-#content-article ul.list li p::before {
+#content-article ul.list li::before {
   content: "\2713";
   color: #801cbd;
   font-weight: bolder;
